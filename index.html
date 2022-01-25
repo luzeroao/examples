@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CALCULADORA</title>
+
+<h2>Calculadora</h2>
+<p> Menú de opciones</p>
+<ol>
+  <li>Suma</li>
+  <li>Resta</li>
+  <li>Multiplicación</li>
+  <li>División</li>
+</ol>
+
+</head>
+<body>
+
+  <a href="javascript:calculadora()">Ejecutar script</a>
+    <script>
+      function calculadora()
+      {
+        var nums=0, i, res, n=0; //inicialización de las variables
+        var opc = prompt("Dame un número del menú: ");
+        if (opc == 1)
+        {
+          res=0;
+          alert("Tu operación elegida es: SUMA"); 
+          n = prompt("Ingrese la cantidad de números a sumar: ")
+          for(i = 0; i<n; i++)
+          {
+            nums = prompt("Ingrese los números: ");
+            res=(parseInt(res)+parseInt(nums)); 
+          }
+          console.log("El resultado de la suma es:",+res)
+        }
+
+        if(opc == 2)
+        {
+          alert("Tu operación elegida es: RESTA"); 
+          //solo se permite division de 2 numeros
+          var a, b, c;
+          a = prompt("Ingrese el número A:");
+          b = prompt("Ingrese el número B:");
+          c=(parseInt(a)-parseInt(b));
+          console.log("El resultado de la resta es:",c)
+        }
+
+        if(opc == 3)
+        {
+          alert("Tu operación elegida es: MULTIPLICACIÓN"); 
+          n = prompt("Ingrese la cantidad de números a multiplicar: ")
+          res=1;
+          for(i = 0; i<n; i++)
+          {
+            nums = prompt("Ingrese los números: ");
+            res=(parseInt(res)*parseInt(nums)); 
+          }
+          console.log("El resultado de la multiplicación es:",res)
+        }
+
+        if(opc == 4)
+        {
+          alert("Tu operación elegida es: DIVISIÓN"); 
+          //solo se permite division de 2 numeros
+          var a, b, c;
+          a = prompt("Ingrese el número A:");
+          b = prompt("Ingrese el número B:");
+          c=(parseInt(a)/parseInt(b));
+          console.log("El resultado de la división es:",c)
+        }
+      }
+    </script>
+</body>
+</html>
